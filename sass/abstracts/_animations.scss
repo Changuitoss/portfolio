@@ -1,0 +1,44 @@
+@keyframes respondToSmall {
+  0% {
+    background-image: url('./img/screen-big.png');
+  }
+
+  16.11% {
+    background-image: url('./img/screen-big.png');
+  }
+
+  32.22% {
+
+  }
+
+  48.33% {
+    transform: scale(.7);
+    background-image: url('./img/screen-med.png');
+  }
+
+  64.44% {
+    transform: scale(.7);
+    background-image: url('./img/screen-med.png');
+  }
+
+  80.55% {
+    transform: scale(.5) rotate(90deg);
+  }
+
+  100% {
+    background-image: url('./img/screen-small.png');
+    transform: scale(.5) rotate(90deg);
+  }
+}
+/* 
+total time = (animation time + animation pause) * number of iteration
+total time = ( 1s + 1s ) * 3
+total time = 6s
+
+animation time (%) = (animation time / total time) * 100
+animation time (%) = ( 1 / 6 ) * 100
+animation time (%) = 16.66% (16.66% = 1s of the time)
+
+animation pause (%) = (animation pause / total time) * 100
+animation pause (%) = ( 1 / 6 ) * 100
+animation pause (%) = 16.66% (16.66% = 1s of the time) */

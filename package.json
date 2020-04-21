@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss src/index.css -w",
+    "serve": "http-server -c-1",
+    "serve:compile": "run-p serve compile:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Changuitoss/portfolio.git"
+  },
+  "author": "Ezequiel Alvarez Rubio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Changuitoss/portfolio/issues"
+  },
+  "homepage": "https://github.com/Changuitoss/portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
+}

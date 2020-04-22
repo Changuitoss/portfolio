@@ -26,3 +26,33 @@
     transform: scale(.5) rotate(90deg);
   }
 }
+
+@keyframes pokeEvolucion {
+  0% {
+    background-image: url('./img/bulbasaur-1');
+  }
+
+  16.11% {
+    background-image: url('./img/bulbasaur-1');
+  }
+
+  48.33% {
+    transform: scale(1.2);
+    background-image: url('./img/bulbasaur-2');
+  }
+
+  64.44% {
+    transform: scale(1.2);
+    background-image: url('./img/bulbasaur-2');
+  }
+
+  80.55% {
+    transform: scale(1.4);
+    background-image: url('./img/bulbasaur-3');
+  }
+
+  100% {
+    transform: scale(1.4);
+    background-image: url('./img/bulbasaur-3');
+  }
+}

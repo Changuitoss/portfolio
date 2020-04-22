@@ -42,14 +42,24 @@
     grid-column: 2 / -1;
   }
 
-  &__botones:link, 
-  &__botones:visited {
-    text-align: center;
+  &__botones {
+    font-size: 1rem;
+    text-align: left;
     display: inline-block;
     text-decoration: none;
-    margin-left: 2rem;
+    height: 1.7rem;
+    margin-left: 1rem;
     grid-row: 3 / 4;
     grid-column: 2 / -1;
+  }
+
+  &__botones:link, 
+  &__botones:visited {
+    color: $color-texto-primario;
+
+    &:hover {
+      border-bottom: 2px solid $color-amarillo;
+    }
     
 
     &--live {
@@ -64,6 +74,10 @@
       grid-row: 3 / 4;
       grid-column: 2 / -1;
     }
+  }
+
+  &__botones--git-logo {
+    width: .8rem;
   }
 
   &:hover {

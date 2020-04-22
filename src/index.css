@@ -3,7 +3,6 @@
     background-image: url("./img/screen-big.png"); }
   16.11% {
     background-image: url("./img/screen-big.png"); }
-  32.22% { }
   48.33% {
     transform: scale(0.7);
     background-image: url("./img/screen-med.png"); }
@@ -16,18 +15,6 @@
     background-image: url("./img/screen-small.png");
     transform: scale(0.5) rotate(90deg); } }
 
-/* 
-total time = (animation time + animation pause) * number of iteration
-total time = ( 1s + 1s ) * 3
-total time = 6s
-
-animation time (%) = (animation time / total time) * 100
-animation time (%) = ( 1 / 6 ) * 100
-animation time (%) = 16.66% (16.66% = 1s of the time)
-
-animation pause (%) = (animation pause / total time) * 100
-animation pause (%) = ( 1 / 6 ) * 100
-animation pause (%) = 16.66% (16.66% = 1s of the time) */
 * {
   margin: 0;
   padding: 0;
@@ -38,13 +25,41 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 .container {
-  margin: 3rem 3rem; }
+  margin: 2rem 3rem; }
+
+.encabezado {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.3; }
+  .encabezado__nombre {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 200;
+    font-size: 2.2rem;
+    letter-spacing: .2rem; }
+  .encabezado__developer {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    font-weight: 100; }
+  .encabezado__mail {
+    font-size: 1.1rem;
+    margin-top: 1.5rem; }
+  .encabezado__git:link, .encabezado__git:visited {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #220200; }
+  .encabezado__mas:link, .encabezado__mas:visited {
+    display: block;
+    width: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #fcba03; }
 
 .proyectos {
   display: grid;
   width: 70%;
-  height: 20rem;
-  margin: 10rem auto;
+  height: auto;
+  margin: 2rem 0 0 1rem;
   border-radius: 6px;
   color: #220200;
   grid-template-rows: repeat(3, 1fr);
@@ -55,31 +70,47 @@ body {
     height: 10rem;
     background-image: url("./img/screen-big.png");
     background-size: cover;
-    margin: 4rem auto;
+    background-position: top;
+    margin: 3.5rem auto 3.5rem auto;
     border-radius: 3px;
     box-shadow: 0 0 0 .6rem black;
+    opacity: .85;
     filter: grayscale(100%);
-    transition: transform .3s, filter .5s;
+    transition: transform .3s, filter .5s, opacity .5s;
     grid-row: 1 / 4;
     grid-column: 1 / 2; }
   .proyectos__titulo {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 2.7rem 0 0 2rem;
     grid-row: 1 / 2;
     grid-column: 2 / -1; }
   .proyectos__descripcion {
     font-size: 1.1rem;
     font-weight: 100;
-    margin-left: 1rem;
+    margin: 0 1rem 0 2rem;
     grid-row: 2 / 3;
     grid-column: 2 / -1; }
-  .proyectos__boton:link, .proyectos__boton:visited {
-    text-decoration: none; }
+  .proyectos__botones:link, .proyectos__botones:visited {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 2rem;
+    grid-row: 3 / 4;
+    grid-column: 2 / -1; }
+    .proyectos__botones:link--live, .proyectos__botones:visited--live {
+      font-size: 2rem;
+      margin-top: 2rem; }
+    .proyectos__botones:link--git, .proyectos__botones:visited--git {
+      text-align: left;
+      margin-top: 2rem;
+      grid-row: 3 / 4;
+      grid-column: 2 / -1; }
   .proyectos:hover {
-    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.2), 0 16px 28px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2), 0 0.8rem 1.5rem rgba(0, 0, 0, 0.24);
     transform: translateY(-0.3rem); }
   .proyectos:hover > .proyectos__imagen {
+    backface-visibility: hidden;
     animation: respondToSmall 4s .6s;
     animation-fill-mode: forwards;
     filter: none;

@@ -1,0 +1,40 @@
+.encabezado {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.3;
+
+  &__nombre {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 200;
+    font-size: 2.2rem;
+    letter-spacing: .2rem;
+  }
+
+  &__developer {
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    font-weight: 100;
+  }
+
+  &__mail {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  &__git:link,
+  &__git:visited {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: $color-texto-primario;
+  }
+
+  &__mas:link,
+  &__mas:visited {
+    display: block;
+    width: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: $color-amarillo;
+  }
+}

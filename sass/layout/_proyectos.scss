@@ -1,8 +1,8 @@
 .proyectos {
   display: grid;
   width: 70%;
-  height: 20rem;
-  margin: 10rem auto;
+  height: auto;
+  margin: 2rem 0 0 1rem;
   border-radius: 6px;
   color: $color-texto-primario;
   grid-template-rows: repeat(3, 1fr);
@@ -14,22 +14,22 @@
     height: 10rem;
     background-image: url('./img/screen-big.png');
     background-size: cover;
-    margin: 4rem auto;
+    background-position: top;
+    margin: 3.5rem auto 3.5rem auto;
     border-radius: 3px;
     box-shadow: 0 0 0 .6rem black;
+    opacity: .85;
     filter: grayscale(100%);
-    //opacity: .2;
-    transition: transform .3s, filter .5s;
-    //transition: filter 2s;
-    
+    transition: transform .3s, filter .5s, opacity .5s;    
     grid-row: 1 / 4;
     grid-column: 1 / 2;
   }
 
   &__titulo {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2rem;
+    //font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 2.7rem 0 0 2rem;
     grid-row: 1 / 2;
     grid-column: 2 / -1;
   }
@@ -37,30 +37,45 @@
   &__descripcion {
     font-size: 1.1rem;
     font-weight: 100;
-    margin-left: 1rem;
+    margin: 0 1rem 0 2rem;
     grid-row: 2 / 3;
     grid-column: 2 / -1;
   }
 
-  &__boton:link, 
-  &__boton:visited {
+  &__botones:link, 
+  &__botones:visited {
+    text-align: center;
+    display: inline-block;
     text-decoration: none;
+    margin-left: 2rem;
+    grid-row: 3 / 4;
+    grid-column: 2 / -1;
+    
+
+    &--live {
+      font-size: 2rem;
+      margin-top: 2rem;
+
+    }
+
+    &--git {
+      text-align: left;
+      margin-top: 2rem;
+      grid-row: 3 / 4;
+      grid-column: 2 / -1;
+    }
   }
 
   &:hover {
-    box-shadow: 0 20px 55px rgba(0,0,0, .2), 0 16px 28px rgba(0,0,0, .24);
+    box-shadow: 0 .8rem 2rem rgba(0,0,0, .2), 0 .8rem 1.5rem rgba(0,0,0, .24);
     transform: translateY(-.3rem);
   }
 
   &:hover > &__imagen {
-    //animation-name: responsive;
+    backface-visibility: hidden;
     animation: respondToSmall 4s .6s;
     animation-fill-mode: forwards;
-    //transform-origin: right;
-    //animation-direction: alternate;
-    //animation-iteration-count: 2;
     filter: none;
     opacity: 1;
-    //transform: scale(1.05);
   }
 }

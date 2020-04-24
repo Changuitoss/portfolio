@@ -33,6 +33,40 @@
     transform: scale(1.5);
     background-image: url("./img/bulbasaur-3.png"); } }
 
+@keyframes rock {
+  0% {
+    background-image: url("./img/piedra.png"); }
+  10% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(1rem); }
+  20% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(-1rem); }
+  30% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(1rem); }
+  40% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(-1rem); }
+  50% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(1rem); }
+  60% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(-1rem); }
+  70% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(1rem); }
+  80% {
+    background-image: url("./img/piedra.png");
+    transform: translateY(-1rem); }
+  90% {
+    background-image: url("./img/tijera.png");
+    transform: translateY(1rem); }
+  100% {
+    background-image: url("./img/tijera.png");
+    transform: translateY(1rem) translateX(1.5rem) scale(1.2); } }
+
 .amarillo {
   background-color: #fcba03; }
 
@@ -122,6 +156,17 @@ body {
     background-repeat: no-repeat; }
   .proyectos:hover > .proyectos__imagen--pokemon {
     animation: pokeEvolucion 4s .6s;
+    animation-fill-mode: forwards;
+    filter: none;
+    opacity: 1; }
+  .proyectos__imagen--rock {
+    background-image: url("./img/piedra.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 1rem; }
+  .proyectos:hover > .proyectos__imagen--rock {
+    animation: rock 1.2s .6s;
     animation-fill-mode: forwards;
     filter: none;
     opacity: 1; }

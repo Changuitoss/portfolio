@@ -57,3 +57,60 @@
     background-image: url('./img/bulbasaur-3.png');
   }
 }
+
+@keyframes rock {
+  0% {
+    background-image: url('./img/piedra.png');
+    //transform: translateY(-1rem);
+  }
+
+  10% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(1rem);
+  }
+
+  20% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(-1rem);
+  }
+
+  30% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(1rem);
+  }
+
+  40% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(-1rem);
+  }
+
+  50% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(1rem);
+  }
+
+  60% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(-1rem);
+  }
+
+  70% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(1rem);
+  }
+
+  80% {
+    background-image: url('./img/piedra.png');
+    transform: translateY(-1rem);
+  }
+
+  90% {
+    background-image: url('./img/tijera.png');
+    transform: translateY(1rem);
+  }
+
+  100% {
+    background-image: url('./img/tijera.png');
+    transform: translateY(1rem) translateX(1.5rem) scale(1.2);
+  }
+}

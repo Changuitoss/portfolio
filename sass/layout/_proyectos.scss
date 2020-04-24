@@ -52,6 +52,21 @@
     opacity: 1;
   }
 
+  &__imagen--rock {
+    background-image: url('./img/piedra.png');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat; 
+    margin-top: 1rem;  
+  }
+
+  &:hover > &__imagen--rock {
+    animation: rock 1.2s .6s;
+    animation-fill-mode: forwards;
+    filter: none;
+    opacity: 1;
+  }
+
   &__imagen--sketch-panel {
     display: grid;
     grid-template-columns: repeat(9, 1fr);

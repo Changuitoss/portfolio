@@ -1,3 +1,11 @@
+.container > .proyectos {
+  margin-top: 6rem;
+}
+
+.container > .proyectos ~ .proyectos {
+  margin: 0 0 -2rem 1rem;
+}
+
 .proyectos {
   display: grid;
   width: 60%;
@@ -9,6 +17,10 @@
   grid-template-columns: repeat(5, 1fr);
   transform: scale(.75);
   transition: all .2s;
+
+  &:first-of-type {
+    margin-top: 7rem;
+  }
 
   &__imagen {
     background-size: cover;
@@ -107,8 +119,8 @@
     text-align: left;
     display: inline-block;
     text-decoration: none;
-    height: 1.7rem;
-    margin: .4rem 0 0 .5rem;
+    line-height: 2rem;
+    margin: 0 0 0 .5rem;
     grid-row: 3 / -1;
     grid-column: 3 / -1;
   }

@@ -80,12 +80,13 @@ body {
   font-family: 'Open Sans', sans-serif; }
 
 .container {
-  margin: 2rem 3rem; }
+  margin: 3rem 3rem; }
 
 .encabezado {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.3;
-  padding-left: 1rem; }
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative; }
   .encabezado__nombre {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
@@ -96,6 +97,10 @@ body {
     letter-spacing: .1rem;
     font-weight: 100;
     margin-bottom: 2rem; }
+  .encabezado__fijo {
+    position: fixed;
+    top: 3rem;
+    right: 20rem; }
   .encabezado__mail {
     font-size: 1.1rem; }
   .encabezado__git:link, .encabezado__git:visited {
@@ -108,13 +113,28 @@ body {
       width: .8rem; }
     .encabezado__git:hover > .encabezado__git--logo {
       transform: scale(1.15); }
-  .encabezado__mas:link, .encabezado__mas:visited {
-    display: block;
+  .encabezado__mas {
+    display: inline-block;
+    text-shadow: 0.05rem 0.05rem rgba(0, 0, 0, 0.3);
+    height: .8rem;
     width: 1rem;
     text-decoration: none;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 900; }
+  .encabezado__mas:link, .encabezado__mas:visited {
     color: #fcba03; }
+    .encabezado__mas:link:hover, .encabezado__mas:visited:hover {
+      transform: scale(1.1) translateY(-0.05rem);
+      text-shadow: 0.07rem 0.07rem rgba(0, 0, 0, 0.3); }
+    .encabezado__mas:link:active, .encabezado__mas:visited:active {
+      transform: scale(1.05) translateY(-0.02rem);
+      text-shadow: 0.06rem 0.06rem rgba(0, 0, 0, 0.3); }
+
+.container > .proyectos {
+  margin-top: 6rem; }
+
+.container > .proyectos ~ .proyectos {
+  margin: 0 0 -2rem 1rem; }
 
 .proyectos {
   display: grid;
@@ -127,6 +147,8 @@ body {
   grid-template-columns: repeat(5, 1fr);
   transform: scale(0.75);
   transition: all .2s; }
+  .proyectos:first-of-type {
+    margin-top: 7rem; }
   .proyectos__imagen {
     background-size: cover;
     background-position: top;
@@ -200,8 +222,8 @@ body {
     text-align: left;
     display: inline-block;
     text-decoration: none;
-    height: 1.7rem;
-    margin: .4rem 0 0 .5rem;
+    line-height: 2rem;
+    margin: 0 0 0 .5rem;
     grid-row: 3 / -1;
     grid-column: 3 / -1; }
   .proyectos__botones:link, .proyectos__botones:visited {

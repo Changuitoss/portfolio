@@ -43,8 +43,7 @@
   }
 
   &:hover > &__imagen--peliculas {
-    backface-visibility: hidden;
-    animation: respondToSmall 4s .6s;
+    animation: respondToSmall 4s .5s;
     animation-fill-mode: forwards;
     filter: none;
     opacity: 1;
@@ -53,10 +52,9 @@
   &__imagen--pokemon {
     background-image: url('./img/bulbasaur-1.png');
     background-size: contain;
-    background-position: top;
     background-repeat: no-repeat;   
   }
-
+  
   &:hover > &__imagen--pokemon {
     animation: pokeEvolucion 4s .6s;
     animation-fill-mode: forwards;

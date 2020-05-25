@@ -1,4 +1,53 @@
-function creaCeldas() {
+
+function creaCeldasCalendario() {
+  const panelCalendario = document.querySelector('.proyectos__imagen--calendario');
+  for(var i = 0; i <= 35; i++) {
+      const div = document.createElement('div');
+      div.classList.add(`proyectos__imagen--calendario-celda-${i}`, 'proyectos__imagen--calendario-celda');
+      if (i == 16 || i == 26 || i == 13) { // Agrega las imagenes a las celdas que voy a animar.
+        const imagen = document.createElement('img');
+        imagen.classList.add(`proyectos__imagen--calendario-${i}`);
+        imagen.setAttribute('src', './src/img/checkmark.png');
+        div.appendChild(imagen);
+      } else if (i == 30) {
+        const imagen = document.createElement('img');
+        imagen.classList.add(`proyectos__imagen--calendario-${i}`);
+        imagen.setAttribute('src', './src/img/x.png');
+        div.appendChild(imagen);
+      }
+      panelCalendario.appendChild(div);
+  }
+  agregaMesCalendario();
+  agregaDiasCalendario();
+}
+
+function agregaMesCalendario() {
+  const nombreMesArr = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const fechaObj = new Date();
+  const mes = nombreMesArr[fechaObj.getMonth()]
+  const celdaMes = document.querySelector('.proyectos__imagen--calendario-celda-0');
+  celdaMes.textContent = mes;
+}
+
+function agregaDiasCalendario() {
+  const nombreDiaArr = ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'];
+  for (let i = 1; i <= 7; i += 1) {
+    const celdaDia = document.querySelector(`.proyectos__imagen--calendario-celda-${i}`);
+    celdaDia.textContent = nombreDiaArr[i - 1];
+    celdaDia.style.border = '0';
+    celdaDia.style.paddingTop = '.2rem';
+  }
+
+}
+
+creaCeldasCalendario();
+
+
+
+
+
+
+/* function creaCeldas() {
   const panelDibujo = document.querySelector('.proyectos__imagen--sketch-panel');
   for(var i = 0; i < 81; i++) {
       const div = document.createElement('div');
@@ -82,4 +131,4 @@ creaCeldas();
 
 const proyectoSketch = document.querySelector('.proyectos__sketch');
 proyectoSketch.addEventListener('mouseenter', pintarFlecha);
-proyectoSketch.addEventListener('mouseleave', despintarFlecha);
+proyectoSketch.addEventListener('mouseleave', despintarFlecha); */

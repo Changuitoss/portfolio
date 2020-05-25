@@ -71,6 +71,26 @@
     background-image: url("./img/tijera.png");
     transform: translateY(1rem) translateX(1.5rem) scale(1.2); } }
 
+@keyframes calendarioCheck {
+  0% {
+    opacity: 0; }
+  10% {
+    transform: scale(1.5);
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes calendarioX {
+  0% {
+    opacity: 0; }
+  10% {
+    transform: scale(1.7);
+    opacity: 1; }
+  100% {
+    opacity: 1;
+    transform: scale(1); } }
+
 .amarillo {
   background-color: #fcba03; }
 
@@ -237,6 +257,48 @@ body::-webkit-scrollbar-thumb {
     transition: transform .3s, filter .5s, opacity .5s;
     grid-row: 1 / -1;
     grid-column: 1 / 3; }
+  .proyectos__imagen--calendario {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr); }
+    .proyectos__imagen--calendario-celda {
+      border: 1px solid #d9d2d2;
+      width: 80%;
+      height: 80%; }
+    .proyectos__imagen--calendario-celda-0 {
+      margin: auto;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      grid-column: 1 / -1; }
+    .proyectos__imagen--calendario-celda-16 {
+      grid-row: 4 / 5;
+      grid-column: 2 / 3; }
+    .proyectos__imagen--calendario-celda-30 {
+      grid-row: 6 / 7;
+      grid-column: 2 / 3; }
+    .proyectos__imagen--calendario-celda-26 {
+      grid-row: 5 / 6;
+      grid-column: 5 / 6; }
+    .proyectos__imagen--calendario-13, .proyectos__imagen--calendario-16, .proyectos__imagen--calendario-26, .proyectos__imagen--calendario-30 {
+      display: inline-block;
+      opacity: 0;
+      width: 100%;
+      height: 100%; }
+  .proyectos:hover > .proyectos__imagen {
+    filter: none; }
+  .proyectos:hover > .proyectos__imagen > .proyectos__imagen--calendario-celda-16 .proyectos__imagen--calendario-16 {
+    width: 80%;
+    animation: calendarioCheck 1s .5s;
+    animation-fill-mode: forwards; }
+  .proyectos:hover > .proyectos__imagen > .proyectos__imagen--calendario-celda-30 > .proyectos__imagen--calendario-30 {
+    animation: calendarioX 1s 1s;
+    animation-fill-mode: forwards; }
+  .proyectos:hover > .proyectos__imagen > .proyectos__imagen--calendario-celda-26 > .proyectos__imagen--calendario-26 {
+    width: 80%;
+    animation: calendarioCheck 1s 1.5s;
+    animation-fill-mode: forwards; }
   .proyectos__imagen--peliculas {
     background-image: url("./img/screen-big.png");
     box-shadow: 0 0 0 .6rem black;

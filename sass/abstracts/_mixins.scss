@@ -1,7 +1,7 @@
 // MEDIA QUERY MANAGER
 /*
-0-600px:    phone
-750-850px:  tab-port
+0-760px:    phone
+760-850px:  tab-port
 850-1000px: tab-land
 1000-1250:  desktop-small
 1800 +:     desktop-big
@@ -9,7 +9,7 @@
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 46.87em) { @content};
+    @media (max-width: 47.5em) { @content};
   }
   @if $breakpoint == tab-port {
     @media (max-width: 53.12em) { @content};

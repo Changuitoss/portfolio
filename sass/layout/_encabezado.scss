@@ -16,12 +16,25 @@
     letter-spacing: .1rem;
     font-weight: 100;
     margin-bottom: 2rem;
+
+    @include respond(tab-land) {
+      margin-bottom: 0;
+    }
   }
 
   &__fijo {
     position: fixed;
     top: 3rem;
     right: 20rem;
+
+    @include respond(desktop-small) {
+      right: 6rem;
+    }
+
+    @include respond(tab-land) {
+      position: inherit;
+      margin-left: 6rem;
+    }
   }
 
   &__mail {

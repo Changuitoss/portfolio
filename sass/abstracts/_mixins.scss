@@ -1,0 +1,26 @@
+// MEDIA QUERY MANAGER
+/*
+0-600px:    phone
+750-850px:  tab-port
+850-1000px: tab-land
+1000-1250:  desktop-small
+1800 +:     desktop-big
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 46.87em) { @content};
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 53.12em) { @content};
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 62.5em) { @content};
+  }
+  @if $breakpoint == desktop-small {
+    @media (max-width: 78.12em) { @content};
+  }
+  @if $breakpoint == desktop-big {
+    @media (max-width: 112.5em) { @content};
+  }
+}

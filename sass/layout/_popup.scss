@@ -10,6 +10,14 @@
   visibility: hidden;
   transition: all .5s;
 
+  @include respond(phone) {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -33,6 +41,17 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.5);
     transition: all .3s;
+
+    @include respond(phone) {
+      position: relative;
+      opacity: 1;
+      width: 100%;
+      padding: 1rem;
+      transform: none;
+      border-radius: 0;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__close {
@@ -48,6 +67,10 @@
       position: absolute;
       top: 1rem;
       right: 1.5rem;
+
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &:hover {
@@ -64,6 +87,10 @@
   &__titulo {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__descripcion {

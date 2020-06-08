@@ -165,6 +165,10 @@ body::-webkit-scrollbar-thumb {
       .encabezado__fijo {
         position: inherit;
         margin-left: 6rem; } }
+    @media (max-width: 47.5em) {
+      .encabezado__fijo {
+        position: initial;
+        margin: 2rem 0 1rem 0; } }
   .encabezado__mail {
     font-size: 1.1rem; }
   .encabezado__git:link, .encabezado__git:visited {
@@ -185,6 +189,9 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     font-size: 1rem;
     font-weight: 900; }
+    @media (max-width: 47.5em) {
+      .encabezado__mas {
+        display: none; } }
   .encabezado__mas:link, .encabezado__mas:visited {
     color: #fcba03; }
     .encabezado__mas:link:hover, .encabezado__mas:visited:hover {
@@ -205,6 +212,13 @@ body::-webkit-scrollbar-thumb {
   opacity: 0;
   visibility: hidden;
   transition: all .5s; }
+  @media (max-width: 47.5em) {
+    .popup {
+      position: relative;
+      visibility: visible;
+      opacity: 1;
+      height: 100%;
+      width: 100%; } }
   .popup:target {
     opacity: 1;
     visibility: visible;
@@ -224,6 +238,16 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .3s; }
+    @media (max-width: 47.5em) {
+      .popup__content {
+        position: relative;
+        opacity: 1;
+        width: 100%;
+        padding: 1rem;
+        transform: none;
+        border-radius: 0;
+        top: 0;
+        left: 0; } }
   .popup__close {
     font-size: 1.4rem;
     font-weight: 900;
@@ -235,6 +259,9 @@ body::-webkit-scrollbar-thumb {
       position: absolute;
       top: 1rem;
       right: 1.5rem; }
+      @media (max-width: 47.5em) {
+        .popup__close:link, .popup__close:visited {
+          display: none; } }
     .popup__close:hover {
       transform: scale(1.1) translateY(-0.05rem);
       text-shadow: 0.04rem 0.04rem rgba(0, 0, 0, 0.3); }
@@ -244,6 +271,9 @@ body::-webkit-scrollbar-thumb {
   .popup__titulo {
     font-family: 'Roboto Mono', monospace;
     font-weight: 400; }
+    @media (max-width: 47.5em) {
+      .popup__titulo {
+        display: none; } }
   .popup__descripcion {
     margin-top: 2rem;
     line-height: 1.5rem; }

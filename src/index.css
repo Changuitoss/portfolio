@@ -92,8 +92,8 @@
     transform: scale(1); } }
 
 /*
-0-600px:    phone
-750-850px:  tab-port
+0-760px:    phone
+760-850px:  tab-port
 850-1000px: tab-land
 1000-1250:  desktop-small
 1800 +:     desktop-big
@@ -125,6 +125,10 @@ body::-webkit-scrollbar-thumb {
   /* roundness of the scroll thumb */
   border: 1px doted black;
   /* creates padding around scroll thumb */ }
+
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom; }
 
 .container {
   margin: 3rem 3rem; }
